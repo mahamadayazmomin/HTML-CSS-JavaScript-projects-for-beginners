@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+*{ margin: 0; padding: 0;}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: 100%;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+ 
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  background: #eee;
+}
+
+.cd__main{
+  background: #fff;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.cd__main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1360px){
+    .cd__main{
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto; 
+      padding: 24px;
+    }
+}

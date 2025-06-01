@@ -1,0 +1,108 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #ffe6f0, #ffe0f7);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#timer {
+  font-size: 7rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px #f8a5c2, 2px 2px 10px rgba(249, 38, 114, 0.3);
+  color: black;
+  width: 600px;
+  text-align: center;
+  margin: 40px auto;
+  animation: glowPulse 2s infinite alternate;
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background: linear-gradient(145deg, #f92672, #f44583);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.5rem 4rem;
+  margin: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+
+button:hover::before {
+  transform: scale(1);
+}
+
+button:hover {
+  background: linear-gradient(145deg, #ff578f, #f92672);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  #timer {
+    font-size: 4rem;
+    width: 90%;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 10px #f92672, 0 0 20px #f92672;
+  }
+  to {
+    text-shadow: 0 0 20px #f44583, 0 0 30px #f44583;
+  }
+}
